@@ -15,7 +15,11 @@ export class List extends Component {
       <div>
         <ActionButton callback={this.reverseList} text="Reverse Names" />
         {this.state.names.map((name, index) => {
-          return <h5 key={name}>{name}</h5>;
+          return (
+            <h5 id={name.toLowerCase()} key={name}>
+              {name}
+            </h5>
+          );
         })}
       </div>
     );
